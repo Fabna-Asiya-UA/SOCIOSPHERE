@@ -28,7 +28,10 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =os.environ.get("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = [
+    "sociosphere-backend.onrender.com",
+    ".onrender.com",
+]
 
 
 # Application definition
@@ -59,8 +62,9 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
-    "https://your-frontend.vercel.app",
+    "https://sociosphere-five.vercel.app",
 ]
+
 
 
 ROOT_URLCONF = 'project.urls'
